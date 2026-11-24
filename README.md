@@ -90,9 +90,26 @@ button:hover {
     display: none;
     margin-top: 25px;
     color: #d64d91;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 1.8;
     animation: muncul 1s ease;
+}
+
+.pesan-kejutan {
+    color: #555;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.9;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.penutup {
+    color: #d64d91;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer {
@@ -127,13 +144,14 @@ button:hover {
     <h1>Selamat Hari Guru!</h1>
 
     <div class="message">
-        mbak Dwi makasih ya udah mau jadi guruku
-        kadang jikalau aku buat salah, atau menyakitkan
-        hati mbak Dwi maaf ya mbak aku juga ga sengaja
-        mungkin niatku bercanda namun bisa aja mbak Dwi
-        sakit hati dengan candaan ku makasih ya mbak
-        udah jadi guru tersabar di dunia makasih juga
-        udah selalu ada ketika aku butuh bantuan
+        Mbak Dwi, makasih ya udah mau jadi guruku.
+        Kadang jikalau aku buat salah atau menyakitkan
+        hati Mbak Dwi, maaf ya Mbak, aku juga nggak sengaja.
+        Mungkin niatku bercanda, namun bisa aja Mbak Dwi
+        sakit hati dengan candaanku.
+
+        Makasih ya Mbak udah jadi guru tersabar di dunia.
+        Makasih juga udah selalu ada ketika aku butuh bantuan.
     </div>
 
     <button onclick="ucapan()">
@@ -142,15 +160,43 @@ button:hover {
 
     <div id="hasil">
         🎉 Selamat Hari Guru Mbak Dwi! 🎉
-        <p style="font-size:40px; margin-top:15px;">  
-        </p>   
-<tr Mbak, terima kasih sudah menjadi guru yang sabar menghadapi segala tingkah lakuku. Terima kasih sudah mengajariku, bukan hanya tentang pelajaran, tetapi juga memberikan semangat ketika aku sedang menghadapi hari-hari yang sulit.
-Maaf kalau selama belajar terkadang aku sulit diatur, banyak bertanya, atau membuat Mbak harus mengulang penjelasan berkali-kali.
-Aku mungkin tidak selalu pandai mengungkapkan rasa terima kasih, tetapi aku benar-benar menghargai setiap waktu, kesabaran, dan kebaikan yang Mbak berikan.
-Semoga Mbak selalu sehat, bahagia, dan tidak pernah kehilangan semangat untuk mengajar.
-Selamat Hari Guru, Mbak. Terima kasih sudah menjadi bagian baik dalam perjalanan belajarku.💐❤️🌷 <tr>
 
-      <tr  Dari anak murid tercinta mbak Dwi (Rizki) <tr>
+        <div class="pesan-kejutan">
+            Mbak, terima kasih sudah menjadi guru yang sabar
+            menghadapi segala tingkah lakuku. Terima kasih
+            sudah mengajariku, bukan hanya tentang pelajaran,
+            tetapi juga memberikan semangat ketika aku sedang
+            menghadapi hari-hari yang sulit.
+
+            <br><br>
+
+            Maaf kalau selama belajar terkadang aku sulit
+            diatur, banyak bertanya, atau membuat Mbak harus
+            mengulang penjelasan berkali-kali.
+
+            <br><br>
+
+            Aku mungkin tidak selalu pandai mengungkapkan
+            rasa terima kasih, tetapi aku benar-benar
+            menghargai setiap waktu, kesabaran, dan kebaikan
+            yang Mbak berikan.
+
+            <br><br>
+
+            Semoga Mbak selalu sehat, bahagia, dan tidak
+            pernah kehilangan semangat untuk mengajar.
+
+            <br><br>
+
+            Selamat Hari Guru, Mbak. Terima kasih sudah
+            menjadi bagian baik dalam perjalanan belajarku.
+        </div>
+
+        <div class="penutup">
+            🌷 Dari anak murid tercinta Mbak Dwi
+            <br>
+            (Rizki) ❤️
+        </div>
     </div>
 
 </div>
@@ -158,12 +204,15 @@ Selamat Hari Guru, Mbak. Terima kasih sudah menjadi bagian baik dalam perjalanan
 <script>
 function ucapan() {
     const hasil = document.getElementById("hasil");
+    const tombol = document.querySelector("button");
 
     hasil.style.display = "block";
 
-    document.querySelector("button").innerHTML =
-        "Kejutan berhasil dibuka ❤️";
-s
+    tombol.innerHTML = "Kejutan berhasil dibuka ❤️";
+    tombol.disabled = true;
+
+    tombol.style.opacity = "0.8";
+
     for (let i = 0; i < 30; i++) {
         setTimeout(() => {
             const hati = document.createElement("div");
