@@ -144,13 +144,13 @@ button:hover {
         🎉 Selamat Hari Guru Mbak Dwi! 🎉
         <p style="font-size:40px; margin-top:15px;">  
         </p>   
-Mbak, terima kasih sudah menjadi guru yang sabar menghadapi segala tingkah lakuku. Terima kasih sudah mengajariku, bukan hanya tentang pelajaran, tetapi juga memberikan semangat ketika aku sedang menghadapi hari-hari yang sulit.
+<tr Mbak, terima kasih sudah menjadi guru yang sabar menghadapi segala tingkah lakuku. Terima kasih sudah mengajariku, bukan hanya tentang pelajaran, tetapi juga memberikan semangat ketika aku sedang menghadapi hari-hari yang sulit.
 Maaf kalau selama belajar terkadang aku sulit diatur, banyak bertanya, atau membuat Mbak harus mengulang penjelasan berkali-kali.
 Aku mungkin tidak selalu pandai mengungkapkan rasa terima kasih, tetapi aku benar-benar menghargai setiap waktu, kesabaran, dan kebaikan yang Mbak berikan.
 Semoga Mbak selalu sehat, bahagia, dan tidak pernah kehilangan semangat untuk mengajar.
-Selamat Hari Guru, Mbak. Terima kasih sudah menjadi bagian baik dalam perjalanan belajarku.💐❤️🌷
+Selamat Hari Guru, Mbak. Terima kasih sudah menjadi bagian baik dalam perjalanan belajarku.💐❤️🌷 <tr>
 
-        Dari anak murid tercinta mbak Dwi (Rizki)
+      <tr  Dari anak murid tercinta mbak Dwi (Rizki) <tr>
     </div>
 
 </div>
