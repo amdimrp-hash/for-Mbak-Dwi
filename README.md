@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -23,7 +24,7 @@ body {
 }
 
 .card {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.9);
     max-width: 550px;
     width: 100%;
     padding: 35px 25px;
@@ -90,9 +91,9 @@ button:hover {
     display: none;
     margin-top: 25px;
     color: #d64d91;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
-    line-height: 1.8;
+    text-align: center;
     animation: muncul 1s ease;
 }
 
@@ -105,11 +106,17 @@ button:hover {
     margin-top: 20px;
 }
 
+.pesan-kejutan p {
+    margin-bottom: 16px;
+}
+
 .penutup {
     color: #d64d91;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
-    margin-top: 20px;
+    line-height: 1.8;
+    margin-top: 25px;
 }
 
 .footer {
@@ -124,12 +131,31 @@ button:hover {
     top: -30px;
     animation: jatuh linear forwards;
     pointer-events: none;
+    z-index: 10;
 }
 
 @keyframes jatuh {
     to {
         transform: translateY(110vh) rotate(360deg);
         opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .pesan-kejutan {
+        font-size: 14px;
     }
 }
 </style>
@@ -154,57 +180,64 @@ button:hover {
         Makasih juga udah selalu ada ketika aku butuh bantuan.
     </div>
 
-    <button onclick="ucapan()">
+    <button id="tombol" onclick="ucapan()">
         Klik untuk kejutan ❤️
     </button>
 
     <div id="hasil">
+
         🎉 Selamat Hari Guru Mbak Dwi! 🎉
 
         <div class="pesan-kejutan">
+
+            <p>
             Mbak, terima kasih sudah menjadi guru yang sabar
             menghadapi segala tingkah lakuku. Terima kasih
             sudah mengajariku, bukan hanya tentang pelajaran,
             tetapi juga memberikan semangat ketika aku sedang
             menghadapi hari-hari yang sulit.
+            </p>
 
-            <br><br>
-
+            <p>
             Maaf kalau selama belajar terkadang aku sulit
             diatur, banyak bertanya, atau membuat Mbak harus
             mengulang penjelasan berkali-kali.
+            </p>
 
-            <br><br>
-
+            <p>
             Aku mungkin tidak selalu pandai mengungkapkan
             rasa terima kasih, tetapi aku benar-benar
             menghargai setiap waktu, kesabaran, dan kebaikan
             yang Mbak berikan.
+            </p>
 
-            <br><br>
-
+            <p>
             Semoga Mbak selalu sehat, bahagia, dan tidak
             pernah kehilangan semangat untuk mengajar.
+            </p>
 
-            <br><br>
-
+            <p>
             Selamat Hari Guru, Mbak. Terima kasih sudah
             menjadi bagian baik dalam perjalanan belajarku.
+            </p>
+
         </div>
 
         <div class="penutup">
-            🌷 Dari anak murid tercinta Mbak Dwi
+            🌷 Dari anak murid tercinta Mbak Dwi 🌷
             <br>
             (Rizki) ❤️
         </div>
+
     </div>
 
 </div>
 
 <script>
 function ucapan() {
+
     const hasil = document.getElementById("hasil");
-    const tombol = document.querySelector("button");
+    const tombol = document.getElementById("tombol");
 
     hasil.style.display = "block";
 
@@ -212,17 +245,27 @@ function ucapan() {
     tombol.disabled = true;
 
     tombol.style.opacity = "0.8";
+    tombol.style.cursor = "default";
+
+    hasil.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
 
     for (let i = 0; i < 30; i++) {
+
         setTimeout(() => {
+
             const hati = document.createElement("div");
 
             hati.className = "hati";
+
             hati.innerHTML = ["❤️","💗","🌸","💖","🌷"][
                 Math.floor(Math.random() * 5)
             ];
 
             hati.style.left = Math.random() * 100 + "vw";
+
             hati.style.animationDuration =
                 (2 + Math.random() * 3) + "s";
 
@@ -232,6 +275,7 @@ function ucapan() {
             document.body.appendChild(hati);
 
             setTimeout(() => hati.remove(), 5000);
+
         }, i * 100);
     }
 }
